@@ -1,0 +1,48 @@
+{
+  "name": "csv-es6-data-backend",
+  "version": "0.0.1",
+  "description": "Backend for fetching and parsing csv files in using es6",
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start --single-run --no-auto-watch karma.config.js",
+    "build": "./node_modules/.bin/webpack --config webpack.config.js",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nucivic/csv-es6-data-backend.git"
+  },
+  "keywords": [
+    "csv",
+    "backend",
+    "fetch",
+    "parse",
+    "es6"
+  ],
+  "author": "Mariano Carballal <marianocarballal@gmail.com> (http://github.com/topicus)",
+  "contributors" : ["Paul Walker <pjwalker76@gmail.com> (http://github.com/starsinmpocket)"],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nucivic/csv-es6-data-backend/issues"
+  },
+  "homepage": "https://github.com/Nucivic/csv-es6-data-backend",
+  "devDependencies": {
+    "babel-core": "^6.0.20",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^6.0.1",
+    "babel-polyfill": "^6.6.1",
+    "babel-preset-es2015": "^6.0.15",
+    "babel-preset-stage-0": "^6.0.15",
+    "fetch-polyfill": "^0.8.2",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.3",
+    "karma-coverage": "^0.4.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-jasmine-async": "0.0.1",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "karma-spec-reporter": "0.0.20",
+    "karma-webpack": "^1.7.0",
+    "phantomjs": "^2.1.3",
+    "phantomjs-polyfill": "0.0.2",
+    "webpack": "^1.12.2"
+  }
+}
