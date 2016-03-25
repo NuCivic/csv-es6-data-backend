@@ -18,7 +18,7 @@
     "parse",
     "es6"
   ],
-  "main": "./dist/csv.js",
+  "main": "./dist/csv.min.js",
   "author": "Mariano Carballal <marianocarballal@gmail.com> (http://github.com/topicus)",
   "contributors": [
     "Paul Walker <pjwalker76@gmail.com> (http://github.com/starsinmpocket)"
