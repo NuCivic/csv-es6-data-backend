@@ -1,5 +1,3 @@
-console.log('csv1');
-
 const CSV = {};
 CSV.__type__ = 'csv';
 
@@ -48,14 +46,12 @@ CSV.fetch = function(dataset) {
 // Convert array of rows in { records: [ ...] , fields: [ ... ] }
 // @param {Boolean} noHeaderRow If true assume that first row is not a header (i.e. list of fields but is data.
 CSV.extractFields = function(rows, dataset) {
+
+
   if (dataset.noHeaderRow !== true && rows.length > 0) {
-    var fields = rows[0];
-    var records = rows.slice(1).map(row => { return row.map((val, key) => { 
-        let x = {};
-        x[fields[key]] = val;
-        return x;
-      }); 
-    });
+    let fields = rows[0];
+    let records = rows.slice(1).map( (row) => zip(fields, row));
+
     return {
       fields: fields,
       records: records
@@ -290,6 +286,19 @@ function chomp(s) {
     // Remove the \n
     return s.substring(0, s.length - 1);
   }
+}
+
+function zip(list, values) {
+    if (list == null) return {};
+    var result = {};
+    for (var i = 0, l = list.length; i < l; i++) {
+      if (values) {
+        result[list[i]] = values[i];
+      } else {
+        result[list[i][0]] = list[i][1];
+      }
+    }
+    return result;
 }
 
 export default CSV;

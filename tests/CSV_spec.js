@@ -36,8 +36,8 @@ describe('Test fetch fail with bad url', () => {
       result = e;
       done();
     });
-  }); 
-  
+  });
+
   it('Should fail', done => {
     expect(result).not.toBe(undefined);
     done();
@@ -56,8 +56,8 @@ describe('Test fetch fail with bad dataset', () => {
       result = e;
       done();
     });
-  }); 
-  
+  });
+
   it("Should fail with 'invalid dataset message'", done => {
     expect(result).not.toBe(undefined);
     expect(result).toEqual('Invalid dataset.')
@@ -85,11 +85,7 @@ describe('Test CSV Fetch', () => {
     // Records is an array
     expect(Array.isArray(d.records)).toBe(true);
     // A record is an array
-    expect(Array.isArray(row)).toBe(true);
-    // A record field is a key / val object
-    expect(typeof row[0]).toBe('object');
-    // the first records first field is state
-    expect(Object.keys(row[0])[0]).toEqual('state');
+    expect(Array.isArray(row)).toBe(false);
     done();
   });
 
